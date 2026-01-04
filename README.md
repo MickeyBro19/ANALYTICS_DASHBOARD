@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# 📊 Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **frontend analytics dashboard** built with React and TypeScript to visualize user growth, engagement, and revenue trends using interactive charts and dynamic filters.
 
-Currently, two official plugins are available:
+This project demonstrates **data-driven UI design**, **derived state management**, and **clean component architecture** without relying on a backend API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* KPI metrics for **Total Users**, **Active Users**, **Conversion Rate**, and **Revenue**
+* Interactive **Line, Bar, and Pie charts** for analytics visualization
+* **Date range filtering** (Last 7 / 30 / 90 days)
+* **Traffic source filtering** (Organic, Paid, Referral)
+* Realistic mock analytics dataset
+* Responsive layout with clean, accessible UI
+* Graceful empty state handling
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 Key Concepts Demonstrated
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Derived state computation from raw datasets
+* Date-based filtering logic (not record-count based)
+* Separation of concerns between data, logic, and presentation
+* Reusable, composable React components
+* One-way data flow and predictable state updates
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Tech Stack
+
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **Recharts**
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├─ components/
+ │   ├─ KPIStat.tsx
+ │   ├─ LineChart.tsx
+ │   ├─ BarChart.tsx
+ │   ├─ PieChart.tsx
+ │   └─ Filters.tsx
+ ├─ data/
+ │   └─ analytics.ts
+ ├─ pages/
+ │   └─ AnalyticsDashboard.tsx
+ ├─ types/
+ │   └─ analytics.ts
+ └─ App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository and run the project locally:
+
+```bash
+npm install
+npm run dev
 ```
+
+---
+
+## 📈 Data Handling Approach
+
+* Analytics data is stored as a static mock dataset
+* Filters are applied using **date-difference logic** to ensure realistic behavior across varying data frequencies
+* All metrics and visualizations react automatically to filter changes
+
+---
+
+## 📌 Future Enhancements (Optional)
+
+* Backend API integration
+* Real-time data updates
+* Exportable reports (CSV / PDF)
+* Authentication and role-based dashboards
+
+---
+
+## 📄 License
+
+This project is intended for **portfolio and educational purposes**.
+
+---
+
+## 🧾 Resume-Ready Description
+
+> Built an interactive analytics dashboard using React and TypeScript to visualize user growth, revenue trends, and traffic sources with dynamic charts and date-based filters using realistic mock datasets.
+
+---
+
+### ✅ Final Note
+
+This project is intentionally **focused and minimal** to highlight frontend fundamentals, data logic, and UI clarity — the same qualities expected in production analytics dashboards.
+
+---
