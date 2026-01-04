@@ -1,6 +1,8 @@
 import { analyticsData } from "../data/analytics";
 import KPIStat from "../components/KPIStat";
 import LineChart from "../components/LineChart";
+import BarChart from "../components/BarChart";
+import PieChart from "../components/PieChart";
 
 const AnalyticsDashboard = () => {
     const totalUsers = analyticsData.reduce((sum, d) => sum + d.users, 0);
@@ -20,8 +22,8 @@ const AnalyticsDashboard = () => {
             </div>
             <div className="grid gap-6 md:grid-cols-2">
                 <LineChart data={analyticsData} />
-                {/*<BarChart data={analyticsData} />*/}
-                {/*<PieChart data={analyticsData} />*/}
+                <BarChart data={analyticsData} />
+                <PieChart data={analyticsData} />
             </div>
         </div>
     );
