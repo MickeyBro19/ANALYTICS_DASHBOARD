@@ -91,15 +91,3 @@ npm run dev
 This project is intended for **portfolio and educational purposes**.
 
 ---
-
-## 🧾 Resume-Ready Description
-
-> Built an interactive analytics dashboard using React and TypeScript to visualize user growth, revenue trends, and traffic sources with dynamic charts and date-based filters using realistic mock datasets.
-
----
-
-### ✅ Final Note
-
-This project is intentionally **focused and minimal** to highlight frontend fundamentals, data logic, and UI clarity — the same qualities expected in production analytics dashboards.
-
----
